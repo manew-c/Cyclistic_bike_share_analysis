@@ -27,7 +27,7 @@
 สร้าง table ใน postgres ก่อน
 
 ```
-CREATE TABLE IF NOT EXISTS public.bike_info
+CREATE TABLE IF NOT EXISTS bike_info
 (
     ride_id varchar(16)  PRIMARY KEY  NOT NULL,
     rideable_type text  NOT NULL,
@@ -45,9 +45,20 @@ CREATE TABLE IF NOT EXISTS public.bike_info
 )
 ```
 
-import ข้อมูลเข้า postgres 
+import ข้อมูลเข้า postgres ใช้คำสั่งนี้ไปเรื่อยๆ แต่เปลี่ยนชื่อไฟล์จนครบ12เดือน
+```
+\copy bike_info FROM '202201-divvy-tripdata.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',');
 ```
 
-```
+data cleaning
+1.มีข้อมูลบางส่วนหายไป
 
+```
+start_station_name 
+start_station_id
+end_station_name
+end_station_id 
+end_lat 
+end_lng
+```
 
