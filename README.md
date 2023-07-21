@@ -19,40 +19,12 @@
  data นี้เป็น public data ของบริษัทสมมติ Cyclistic ดูข้อมูลได้ที่ [Divvy](https://divvy-tripdata.s3.amazonaws.com/index.html) ถูกจัดทำภายใต้ [licenceนี้](https://ride.divvybikes.com/data-license-agreement) และไม่เปิดเผยข้อมูลส่วนบุคคลของผู้ขับขี่ ทำให้เราไม่มีสามารถวิเคราะห์ที่อยู่อาศัยของผู้ขับขี่กับตำแหน่งสถานีเช่าจักรยานได้
 
 ## Process
-1.tool ที่ใช้ Postgresql
-เพราะ sql สามารถqueryข้อมูลจำนวนมากได้รวดเร็วกว่า excel 
-
-2.import data
-
-สร้าง table ใน postgres ก่อน
-
-```
-CREATE TABLE IF NOT EXISTS bike_info
-(
-    ride_id varchar(16)  PRIMARY KEY  NOT NULL,
-    rideable_type text  NOT NULL,
-    started_at timestamp without time zone,
-    ended_at timestamp without time zone,
-    start_station_name varchar(100),
-    start_station_id varchar(100) ,
-    end_station_name varchar(100) ,
-    end_station_id varchar(100) ,
-    start_lat numeric,
-    start_lng numeric,
-    end_lat numeric,
-    end_lng numeric,
-    member_casual varchar(100) ,
-)
-```
-
-import ข้อมูลเข้า postgres ใช้คำสั่งนี้ไปเรื่อยๆ แต่เปลี่ยนชื่อไฟล์จนครบ12เดือน
-```
-\copy bike_info FROM '202201-divvy-tripdata.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',');
-```
+tool : excel เพราะช่วยให้เราเห็น format ของแต่ละ column ได้ง่าย และ fliter ข้อมูลได้อย่างรวดเร็ว
 
 data cleaning
-1.มีข้อมูลบางส่วนหายไป
+1. Check null values
 
+จากการ filter พบมีข้อมูลบางส่วนหายไปใน 6 column นี้
 ```
 start_station_name 
 start_station_id
@@ -61,4 +33,43 @@ end_station_id
 end_lat 
 end_lng
 ```
+filter หา row ที่มีข้อมูลเพียง 1 column จากใน 2 columnนี้ start_station_name หรือ start_station_id ได้ 0 row
 
+filter หา row ที่มีข้อมูลเพียง 1 column จากใน 2 columnนี้ end_station_name หรือ end_station_id ได้ 0 row
+
+แสดงว่า station_name และ station_id ข้อมูลหายไปพร้อมกันเสมอ เราไม่สามารถหา station_id แล้ว insert station_name เองได้ จึงจำเป็นต้องลบ row เหล่านี้ทิ้งไป 
+
+นอกจากนี้พบว่า row ไหนที่ไม่มี end_lat กับ end_lng จะไม่มี end_station เสมอ
+
+2. Start and end date-time
+เวลา start ต้องเกิดก่อน end 
+   
+
+## Analyze
+1.import data tool ที่ใช้ Postgresql เพราะ sql สามารถqueryข้อมูลจำนวนมากได้รวดเร็วกว่า excel 
+
+สร้าง table ใน postgres ก่อน
+
+```
+CREATE TABLE IF NOT EXISTS bike_info
+(
+    ride_id varchar(16)  PRIMARY KEY  NOT NULL,
+    rideable_type text  NOT NULL,
+    started_at timestamp without time zone NOT NULL,
+    ended_at timestamp without time zone NOT NULL,
+    start_station_name varchar(100) NOT NULL,
+    start_station_id varchar(100) NOT NULL,
+    end_station_name varchar(100) NOT NULL,
+    end_station_id varchar(100) NOT NULL,
+    start_lat numeric NOT NULL,
+    start_lng numeric NOT NULL,
+    end_lat numeric NOT NULL,
+    end_lng numeric NOT NULL,
+    member_casual varchar(100) NOT NULL,
+)
+```
+
+import ข้อมูลเข้า postgres ใช้คำสั่งนี้ไปเรื่อยๆ แต่เปลี่ยนชื่อไฟล์จนครบ12เดือน
+```
+\copy bike_info FROM '202201-divvy-tripdata.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',');
+```
