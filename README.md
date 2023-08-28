@@ -14,7 +14,7 @@
 
 โดยข้อมูลที่นำมานั้นมาจากภายในบริษัทเองจึงเชื่อถือได้ ข้อมูลนั้นครอบคลุมรายละเอียดการเดินทาง วันเวลา ประเภทพาหนะ และประเภทสมาชิก และข้อมูลมีการอัพเดททุกเดือน ข้อมูลไม่มีการ bias เพราะได้ลบข้อมูลที่พนักงานบริษัทใช้งานเองออกหมดแล้ว นอกจากนี้จำนวนข้อมูลนั้นเพียงพอในการวิเคราะห์เพราะเป็นข้อมูลทั้งpopulationของผู้ขับขี่ทั้งหมดที่ใช้บริการCyclistic
 
-2.licence and privacy
+2. Licence and privacy
 
  data นี้เป็น public data ของบริษัทสมมติ Cyclistic ดูข้อมูลได้ที่ [Divvy](https://divvy-tripdata.s3.amazonaws.com/index.html) ถูกจัดทำภายใต้ [licenceนี้](https://ride.divvybikes.com/data-license-agreement) และไม่เปิดเผยข้อมูลส่วนบุคคลของผู้ขับขี่ ทำให้เราไม่มีสามารถวิเคราะห์ที่อยู่อาศัยของผู้ขับขี่กับตำแหน่งสถานีเช่าจักรยานได้
 
@@ -23,4 +23,5 @@
    
 
 ## Analyze
-  ใช้ Tableau ดูได้ที่ไฟล์PDFนี้ หรือที่เว็บไซต์ Tableau [linkนี้](https://public.tableau.com/app/profile/manassanan.chantaratin/viz/bike_2_16906294601220/Dashboard2#1)
+  ใช้ Tableau ดูได้ที่ไฟล์ PDF [Cyclistic_bike_share_analysis.pdf](https://github.com/manew-c/Cyclistic_bike_share_analysis/files/12454276/Cyclistic_bike_share_analysis.2.pdf)
+  นี้ หรือที่เว็บไซต์ Tableau [linkนี้](https://public.tableau.com/app/profile/manassanan.chantaratin/viz/bike_2_16906294601220/Dashboard2#1)
