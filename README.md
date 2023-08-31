@@ -19,10 +19,19 @@
  data นี้เป็น public data ของบริษัทสมมติ Cyclistic ดูข้อมูลได้ที่ [Divvy](https://divvy-tripdata.s3.amazonaws.com/index.html) ถูกจัดทำภายใต้ [licenceนี้](https://ride.divvybikes.com/data-license-agreement) และไม่เปิดเผยข้อมูลส่วนบุคคลของผู้ขับขี่ ทำให้เราไม่มีสามารถวิเคราะห์ที่อยู่อาศัยของผู้ขับขี่กับตำแหน่งสถานีเช่าจักรยานได้
 
 ## Process
-  ใช้ python ในการ cleaning ข้อมูลสามารถดูเต็มๆได้ที่เว็บไซต์ [kaggle](https://www.kaggle.com/code/manassananc/cyclistic-bike-share-analysis) หรือดูที่ไฟล์ cyclistic-bike-share-analysis.ipynb ข้างบน
+  ใช้ python ในการ cleaning ข้อมูลสามารถดูได้ที่เว็บไซต์ [kaggle](https://www.kaggle.com/code/manassananc/cyclistic-bike-share-analysis) หรือดูที่ไฟล์ cyclistic-bike-share-analysis.ipynb ข้างบน
    
 
 ## Analyze
-  ใช้ Tableau ดูได้ที่ไฟล์ PDF [Cyclistic_bike_share_analysis.pdf](https://github.com/manew-c/Cyclistic_bike_share_analysis/files/12454276/Cyclistic_bike_share_analysis.2.pdf)
-  นี้ หรือที่เว็บไซต์ Tableau [linkนี้](https://public.tableau.com/app/profile/manassanan.chantaratin/viz/bike_2_16906294601220/Dashboard2#1)
+  สามารถดูดูได้ที่เว็บไซต์ Tableau [linkนี้](https://public.tableau.com/app/profile/manassanan.chantaratin/viz/bike_2_16906294601220/Dashboard2#1)
+![anapage1](https://github.com/manew-c/Cyclistic_bike_share_analysis/assets/113186479/4d1aac8b-2090-4188-b169-976695fc2a12)
+
+![anapage2](https://github.com/manew-c/Cyclistic_bike_share_analysis/assets/113186479/16c8d6bd-ef0b-48d0-ab7a-9c2c54998d9f)
+
+ ![Screenshot 2023-09-01 011935](https://github.com/manew-c/Cyclistic_bike_share_analysis/assets/113186479/22e7a26a-b1bb-47ee-9769-57913a095a41)
+ 
+![Cyclistic_bike_share_analysis (1)](https://github.com/manew-c/Cyclistic_bike_share_analysis/assets/113186479/cb33e18b-872e-461b-8537-6d381e7fac6b)
+
+![Screenshot 2023-09-01 013020](https://github.com/manew-c/Cyclistic_bike_share_analysis/assets/113186479/7fd66acc-9d11-4bb7-876b-b61b95dada21)
+
   
