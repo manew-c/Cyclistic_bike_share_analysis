@@ -23,7 +23,7 @@
    
 
 ## Analyze
-  สามารถดูดูได้ที่เว็บไซต์ Tableau [linkนี้](https://public.tableau.com/app/profile/manassanan.chantaratin/viz/bike_2_16906294601220/Dashboard2#1)
+  สามารถดูได้ที่เว็บไซต์ Tableau [linkนี้](https://public.tableau.com/app/profile/manassanan.chantaratin/viz/bike_2_16906294601220/Dashboard2#1)
 ![anapage1](https://github.com/manew-c/Cyclistic_bike_share_analysis/assets/113186479/4d1aac8b-2090-4188-b169-976695fc2a12)
 
 ![anapage2](https://github.com/manew-c/Cyclistic_bike_share_analysis/assets/113186479/16c8d6bd-ef0b-48d0-ab7a-9c2c54998d9f)
