@@ -19,7 +19,7 @@
  data นี้เป็น public data ของบริษัทสมมติ Cyclistic ดูข้อมูลได้ที่ [Divvy](https://divvy-tripdata.s3.amazonaws.com/index.html) ถูกจัดทำภายใต้ [licenceนี้](https://ride.divvybikes.com/data-license-agreement) และไม่เปิดเผยข้อมูลส่วนบุคคลของผู้ขับขี่ ทำให้เราไม่มีสามารถวิเคราะห์ที่อยู่อาศัยของผู้ขับขี่กับตำแหน่งสถานีเช่าจักรยานได้
 
 ## Process
-  ใช้ python ในการ cleaning ข้อมูลสามารถดูเต็มๆได้ที่เว็บไซต์ [kaggle](https://www.kaggle.com/code/manassananc/cyclistic-bike-share-analysis)
+  ใช้ python ในการ cleaning ข้อมูลสามารถดูเต็มๆได้ที่เว็บไซต์ [kaggle](https://www.kaggle.com/code/manassananc/cyclistic-bike-share-analysis) หรือดูที่ไฟล์ cyclistic-bike-share-analysis.ipynb
    
 
 ## Analyze
